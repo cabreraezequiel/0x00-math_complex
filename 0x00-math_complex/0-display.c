@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- *
- *
+ * display_complex_number - displays the complex numbers
+ * @c: complex number c
  */
 
 void display_complex_number(complex c)

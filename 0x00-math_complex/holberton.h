@@ -3,6 +3,12 @@
 #include <stddef.h>
 #include <stdio.h>
 
+/**
+ * struct complex - complex numbers
+ * @re: Real part
+ * @im: Imaginary part
+ */
+
 typedef struct complex
 {
 	double re;
