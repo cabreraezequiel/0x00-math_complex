@@ -7,8 +7,6 @@
 
 void display_complex_number(complex c)
 {
-	if (c.re != NULL && c.re != NULL)
-	{
 	if (c.re != 0)
 	{
 		printf("%g", c.re);
@@ -28,6 +26,5 @@ void display_complex_number(complex c)
 	if (c.re != 0 || c.im != 0)
 	{
 		printf("\n");
-	}
 	}
 }
