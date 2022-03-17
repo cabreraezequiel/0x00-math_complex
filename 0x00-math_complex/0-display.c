@@ -7,7 +7,7 @@
 
 void display_complex_number(complex c)
 {
-	while (c != NULL)
+	if (c.re != NULL && c.re != NULL)
 	{
 	if (c.re != 0)
 	{
