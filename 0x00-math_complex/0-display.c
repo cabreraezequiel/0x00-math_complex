@@ -21,7 +21,7 @@ void display_complex_number(complex c)
 	}
 	if (c.im != 0)
 	{
-		printf("%i", c.im);
+		printf("i");
 	}
 	if (c.re != 0 || c.im != 0)
 	{
