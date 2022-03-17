@@ -15,9 +15,13 @@ void display_complex_number(complex c)
 			printf(" + ");
 		}
 	}
-	if (c.im != 0)
+	if (c.im != 0 && c.im != 1)
 	{
 		printf("%g", c.im);
+	}
+	if (c.im != 0)
+	{
+		printf("%i", c.im);
 	}
 	if (c.re != 0 || c.im != 0)
 	{
