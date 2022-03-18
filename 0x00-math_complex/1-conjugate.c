@@ -8,6 +8,7 @@
 
 complex conjugate(complex c)
 {
-	c.im = -(c.im);
+	if (c.im != 0
+	    c.im = -(c.im);
 	return (c);
 }

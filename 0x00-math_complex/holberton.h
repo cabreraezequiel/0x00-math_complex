@@ -2,6 +2,7 @@
 #define MAIN
 #include <stddef.h>
 #include <stdio.h>
+#include <math.h>
 
 /**
  * struct complex - complex numbers
