@@ -6,7 +6,7 @@
  * Return: argument
  */
 
-double argument(complex c);
+double argument(complex c)
 {
 	return(atan(c.im / c.re));
 }
