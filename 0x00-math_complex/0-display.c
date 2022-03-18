@@ -9,7 +9,10 @@ void display_complex_number(complex c)
 {
 	if (c.re != 0)
 	{
-		printf("%.9g", c.re);
+		if (c.re < 0)
+			printf(" - %.9g", -(c.re));
+		else
+			printf("%.9g", c.re);
 		if (c.im > 0)
 		{
 			printf(" + ");
