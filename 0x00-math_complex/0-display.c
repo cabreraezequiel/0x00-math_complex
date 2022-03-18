@@ -15,7 +15,7 @@ void display_complex_number(complex c)
 			printf(" + ");
 		}
 	}
-	if (c.im > 1)
+	if (c.im > 1 || c.im == 0)
 	{
 		printf("%.9g", c.im);
 	}
@@ -27,7 +27,7 @@ void display_complex_number(complex c)
 	{
 		printf("i");
 	}
-	if (c.re != 0 || c.im != 0)
+	if (c.re != 0)
 	{
 		printf("\n");
 	}
