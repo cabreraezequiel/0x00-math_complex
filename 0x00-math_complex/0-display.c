@@ -12,21 +12,24 @@ void display_complex_number(complex c)
 		if (c.im == 0)
 			printf("0\n");
 		if (c.im < 0)
-			printf("- %.9g\n", -(c.im));
+			printf("- %.9gi", -(c.im));
 		if (c.im > 0)
-			printf("%.9g\n", c.im);
+			printf("%.9gi", c.im);
 	}
 	else
 	{
-		if (c.re > 0 && c.im > 0)
-			printf("%.9g + %.9g\n", c.re, c.im);
-		if (c.re < 0 && c.im > 0)
-			printf("- %.9g + %.9g\n", -c.re, c.im);
-		if (c.re > 0 && c.im < 0)
-			printf("%.9g - %.9g\n", c.re, -c.im);
-		if (c.re < 0 && c.im < 0)
-			printf("- %.9g - %.9g\n", -c.re, -c.im);
-		if (c.im == 0)
-			printf("%.9g\n", c.re);
+		if (c.re > 0)
+			printf("%.9g", c.re);
+		if (c.re < 0)
+			printf("- %.9g", -(c.re));
+		if (c.im == 1)
+			printf(" + i");
+		if (c.im == -1)
+			printf(" - i");
+		if (c.im < -1)
+			printf(" - %.9gi", -(c.im));
+		if (c.im > 1)
+			printf(" + %.9gi", c.im);
 	}
+	printf("\n");
 }
