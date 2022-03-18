@@ -14,6 +14,10 @@ void display_complex_number(complex c)
 		{
 			printf(" + ");
 		}
+		if (c.im == 0)
+		{
+			printf("\n");
+		}
 	}
 	if (c.im > 1)
 	{
