@@ -27,8 +27,5 @@ void display_complex_number(complex c)
 	{
 		printf("i");
 	}
-	if (c.re != 0)
-	{
-		printf("\n");
-	}
+	printf("\n");
 }
