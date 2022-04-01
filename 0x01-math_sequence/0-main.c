@@ -11,7 +11,7 @@ void print_list(t_cell *head)
 	if (head == NULL)
 		return;
 	print_list(head->next);
-	printf("%.9gi ",head->elt);
+	printf("%fi ",head->elt);
 }
 
 int main()

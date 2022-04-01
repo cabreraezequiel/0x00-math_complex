@@ -1,9 +1,0 @@
-#ifndef MAIN
-#define MAIN
-#include <stddef.h>
-#include <stdio.h>
-#include <math.h>
-
-t_cell *heron(double p, double x0);
-
-#endif /* MAIN */
