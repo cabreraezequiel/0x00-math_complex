@@ -1,4 +1,4 @@
-#include "heron.h"
+#include "fibonacci.h"
 #include <math.h>
 
 /**
@@ -6,38 +6,40 @@
  * @c: complex number c
  */
 
-t_cell *fibonnaci()
+t_cell *Fibonnaci()
 {
-	double un = x0;
+	int n = 1, f, a, b;
 	t_cell *head;
-	t_cell *aux;
-	int m = 1,;
 
-	head = malloc(sizeof(*aux));
-	while((sqrt(p)) + (pow(10, -7)) < un)
+	head = NULL;
+	for (n = 1; f < 6800; n++)
 	{
-		un = ((1 / 2) * (m + p / m));
-		aux->elt = un;
-		aux = aux->next;
-		if (m == 1)
-			head = aux;
-		m++;
+		if (n <= 2)
+			add_node(&head, 1);
+
+		else
+		{
+			a = (get_node(head, n - 1))->elt;
+			b = (get_node(head, n - 2))->elt;
+			f = a + b;
+			add_node(&head, f);
+		}
 	}
 
 	return (head);
 }
 
 /**
- * add_nodeint_end - adds a new node at the end of a t_cell list
+ * add_node - adds a new node at the end of a t_cell list
  * @head: head
  * @n: n
  * Return: new end
  */
 
-t_cell *add_nodeint_end(t_cell **head, const double n)
+t_cell *add_node(t_cell **head, const int n)
 {
-	listint_t *nend;
-	listint_t *aux = *head;
+	t_cell *nend;
+	t_cell *aux = *head;
 
 	nend = malloc(sizeof(t_cell));
 	if (nend == NULL)
@@ -60,4 +62,26 @@ t_cell *add_nodeint_end(t_cell **head, const double n)
 		aux->next = nend;
 	}
 	return (nend);
+}
+
+/**
+ * get_node - returns the nth node of a t_cell linked list
+ * @head: head
+ * @index: index
+ * Return: node at index
+ */
+
+t_cell *get_node(t_cell *head, int index)
+{
+	t_cell *aux = head;
+	int n = 0;
+
+	while (n < index)
+	{
+		if (aux->next == NULL)
+			return (NULL);
+		aux = aux->next;
+		n++;
+	}
+	return (aux);
 }

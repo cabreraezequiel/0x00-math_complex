@@ -13,7 +13,7 @@ t_cell *heron(double p, double x0)
 {
 	double un = x0;
 	t_cell *head;
-	int m = 1;
+	double m = 1;
 
 	head = NULL;
 	while ((sqrt(p)) + (pow(10, -7)) < un)
