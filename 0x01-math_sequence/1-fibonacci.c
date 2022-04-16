@@ -14,7 +14,7 @@ t_cell *Fibonnaci()
 	head = NULL;
 	add_node(&head, 1);
 
-	while (f < 6180)
+	while (f != 6765)
 	{
 		a = b;
 		b = f;
