@@ -1,5 +1,4 @@
 #include "heron.h"
-#include <math.h>
 
 /**
  * heron - returns the Heron sequence until having convergence
@@ -11,16 +10,24 @@
 
 t_cell *heron(double p, double x0)
 {
-	double un = x0;
 	t_cell *head;
-	double m = 1;
+	double m, err = 1, n = 10;
+
+	for (m = 0; m < 7; m++)
+	{
+		n /= 10;
+	}
 
 	head = NULL;
-	while ((sqrt(p)) + (pow(10, -7)) < un)
+	add_node(&head, 1);
+
+	while (err > n)
 	{
-		un = ((0.5) * (m + p / m));
-		add_node(&head, un);
-		m++;
+		x0 = ((0.5) * (x0 + (p / x0)));
+		add_node(&head, x0);
+		err = (x0 * x0) - p;
+		if (err < 0)
+			err *= -1;
 	}
 
 	return (head);
@@ -35,28 +42,16 @@ t_cell *heron(double p, double x0)
 
 t_cell *add_node(t_cell **head, const double n)
 {
-	t_cell *nend;
-	t_cell *aux = *head;
+	t_cell *nhead;
 
-	nend = malloc(sizeof(t_cell));
-	if (nend == NULL)
+	nhead = malloc(sizeof(**head));
+	if (nhead == NULL)
 	{
 		return (NULL);
 	}
-	nend->elt = n;
-	nend->next = NULL;
+	nhead->elt = n;
+	nhead->next = (*head);
+	(*head) = nhead;
 
-	if (*head == NULL)
-	{
-		*head = nend;
-	}
-	else
-	{
-		while (aux->next != NULL)
-		{
-			aux = aux->next;
-		}
-		aux->next = nend;
-	}
-	return (nend);
+	return (nhead);
 }
