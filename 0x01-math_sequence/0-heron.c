@@ -34,7 +34,7 @@ t_cell *heron(double p, double x0)
 }
 
 /**
- * add_node - adds a new node at the end of a t_cell list
+ * add_node - adds a new node at the beggining of a t_cell list
  * @head: head
  * @n: n
  * Return: new end

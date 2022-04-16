@@ -16,5 +16,7 @@ int main()
 	head = Fibonnaci();
 	print_list(head);
 	printf("\n");
+	if (head)
+		printf("The gold number is: %lf\n", gold_number(head));
 	return (0);
 }
